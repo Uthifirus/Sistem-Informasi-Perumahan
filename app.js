@@ -10,9 +10,9 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
-app.get('/about',(req,res)=>{
-    res.render('about', {
-        title: 'about',
-        layout: 'layouts/main-layout'
-    })
-} )
+// app.get('/about',(req,res)=>{
+//     res.render('about', {
+//         title: 'about',
+//         layout: 'layouts/main-layout'
+//     })
+// } )
