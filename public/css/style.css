@@ -98,4 +98,60 @@ li.dropdown {
   color: white;
 }
 
+.nav .icon {
+  display: none;
+}
+
+/* footer */
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: absolute; }
+	header { padding-top:40px; }
+}
+
+.footer-distributed{
+	background-color: #caf0c7;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+  font-family: 'Pacifico';
+	padding: 10px;
+}
+
+.footer-distributed .footer-left{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #04aa6d;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 0px) {
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+}
 /* Body Index */
