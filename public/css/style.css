@@ -104,15 +104,13 @@ li.dropdown {
 
 /* footer */
 /* The footer is fixed to the bottom of the page */
-
 footer{
 	position: fixed;
 	bottom: 0;
 }
 
-@media (max-height:800px){
+@media (max-height: 400px){
 	footer { position: absolute; }
-	header { padding-top:40px; }
 }
 
 .footer-distributed{
@@ -121,7 +119,8 @@ footer{
 	width: 100%;
 	text-align: center;
   font-family: 'Pacifico';
-	padding: 10px;
+	padding: 0px;
+  letter-spacing: 2px;
 }
 
 .footer-distributed .footer-left{
@@ -130,10 +129,6 @@ footer{
 }
 
 /* Footer left */
-.footer-distributed .footer-left{
-	width: 30%;
-}
-
 .footer-distributed .footer-company-name{
 	color:  #04aa6d;
 	font-size: 14px;
@@ -143,14 +138,11 @@ footer{
 
 /* Here is the code for Responsive Footer */
 /* You can remove below code if you don't want Footer to be responsive */
-
-@media (max-width: 0px) {
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
+@media (max-width: 400px) {
+	.footer-distributed .footer-left{
 		display: block;
 		width: 100%;
-		margin-bottom: 40px;
+		margin-bottom: 0px;
 		text-align: center;
 	}
 }
