@@ -6,8 +6,8 @@ app.listen(3000, ()=>{
     console.log("server run on port 3000")
 })
 
-app.use(express.static("public"));
 app.set('view engine', 'ejs');
+app.use(express.static("public"));
 app.use(expressLayouts);
 
 app.get('/',(req,res)=>{
@@ -16,3 +16,10 @@ app.get('/',(req,res)=>{
         layout: 'layouts/main-layout'
     })
 } )
+
+app.get('/detail_berita', (req,res)=>{
+    res.render('detail_berita',{
+        title: 'Detail Berita',
+        layout: 'layouts/main-layout'
+    })
+})

@@ -1,20 +1,23 @@
 /* import google font */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 /* bootstrap icon */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-
 /* All */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
 }
 
 /* topheader */
-.topbar{
+.topbar {
   font-size: 20px;
   letter-spacing: 10px;
-  font-family: 'Pacifico';
+  font-family: "Pacifico";
   padding: 18px;
   text-align: center;
   color: #04aa6d;
@@ -41,7 +44,7 @@
 }
 
 /* user icon */
-.icon-user-nav{
+.icon-user-nav {
   color: white;
   font-size: 35px;
   float: right;
@@ -49,7 +52,8 @@
 }
 
 /* user nav */
-li a, p{
+li a,
+p {
   display: inline-block;
   color: white;
   text-align: center;
@@ -64,7 +68,8 @@ li a, p{
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover,
+.dropdown:hover .dropbtn {
   background-color: #04aa6d;
 }
 
@@ -78,7 +83,7 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 182px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -104,46 +109,114 @@ li.dropdown {
 
 /* footer */
 /* The footer is fixed to the bottom of the page */
-footer{
-	position: fixed;
-	bottom: 0;
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
-@media (max-height: 400px){
-	footer { position: absolute; }
+@media (max-height: 400px) {
+  footer {
+    position: absolute;
+  }
 }
 
-.footer-distributed{
-	background-color: #caf0c7;
-	box-sizing: border-box;
-	width: 100%;
-	text-align: center;
-  font-family: 'Pacifico';
-	padding: 0px;
+.footer-distributed {
+  background-color: #caf0c7;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-family: "Pacifico";
+  padding: 0px;
   letter-spacing: 2px;
 }
 
-.footer-distributed .footer-left{
-	display: inline-block;
-	vertical-align: top;
+.footer-distributed .footer-left {
+  display: inline-block;
+  vertical-align: top;
 }
 
 /* Footer left */
-.footer-distributed .footer-company-name{
-	color:  #04aa6d;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
+.footer-distributed .footer-company-name {
+  color: #04aa6d;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
 }
 
 /* Here is the code for Responsive Footer */
 /* You can remove below code if you don't want Footer to be responsive */
 @media (max-width: 400px) {
-	.footer-distributed .footer-left{
-		display: block;
-		width: 100%;
-		margin-bottom: 0px;
-		text-align: center;
-	}
+  .footer-distributed .footer-left {
+    display: block;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+  }
 }
+
 /* Body Index */
+.container {
+  margin: 20px;
+  padding: 2px;
+  width: 98%;
+  align-items: center;
+}
+
+.card {
+  margin: 11px;
+  display: inline-block;
+  border: 1px solid rgb(214, 214, 214);
+  width: 360px;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  margin: 20px 20px 0px 20px;
+  width: auto;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 8px;
+}
+
+.card-img img{
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+
+.card-content{
+  margin: 20px 25px 0px 25px;
+  width: auto;
+  height: auto;
+}
+
+/* Detail Berita */
+.container-berita{
+  margin: auto;
+  width: 70%;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 8px;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.img-berita{
+  margin: 40px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-berita{
+  margin: 40px;
+  justify-content: center;
+}
+
+.img-berita img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
