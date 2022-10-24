@@ -20,6 +20,20 @@ app.get('/',(req,res)=>{
 app.get('/detail_berita', (req,res)=>{
     res.render('detail_berita',{
         title: 'Detail Berita',
-        layout: 'layouts/main-layout'
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/profile_warga', (req,res)=>{
+    res.render('profile_warga', {
+        title: 'Profile',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/edit_profile', (req,res)=>{
+    res.render('edit_profile', {
+        title: 'Edit Profile',
+        layout: 'layouts/profile'
     })
 })
