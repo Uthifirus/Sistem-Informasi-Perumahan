@@ -51,3 +51,10 @@ app.get('/sub_pembayaran', (req,res)=>{
         layout: 'layouts/profile'
     })
 })
+
+app.get('/transaksi', (req,res)=>{
+    res.render('transaksi', {
+        title:'pembayaran',
+        layout: 'layouts/profile'
+    })
+})
