@@ -38,6 +38,20 @@ app.get('/edit_profile', (req,res)=>{
     })
 })
 
+app.get('/pembayaran', (req, res)=>{
+    res.render('kelola_pembayaran', {
+        title: 'pembayaran',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/sub_pembayaran', (req,res)=>{
+    res.render('sub_pembayaran', {
+        title: 'pembayaran',
+        layout: 'layouts/profile'
+    })
+})
+
 app.get('/kelola_keuangan', (req,res)=>{
     res.render('kelola_keuangan', {
         title: 'Kelola Keuangan',
