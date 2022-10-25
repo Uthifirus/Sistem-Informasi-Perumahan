@@ -37,3 +37,10 @@ app.get('/edit_profile', (req,res)=>{
         layout: 'layouts/profile'
     })
 })
+
+app.get('/kelola_keuangan', (req,res)=>{
+    res.render('kelola_keuangan', {
+        title: 'Kelola Keuangan',
+        layout: 'layouts/profile'
+    })
+})
