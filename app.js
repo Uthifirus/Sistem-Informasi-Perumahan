@@ -17,6 +17,15 @@ app.get('/',(req,res)=>{
     })
 } )
 
+// Warga
+
+app.get('/Home_Warga',(req,res)=>{
+    res.render('index', {
+        title: 'Perum Sugan Rame',
+        layout: 'layouts/main-layout-warga'
+    })
+} )
+
 app.get('/detail_berita', (req,res)=>{
     res.render('detail_berita',{
         title: 'Detail Berita',
@@ -59,6 +68,8 @@ app.get('/transaksi', (req,res)=>{
     })
 })
 
+// Ketua RT
+
 app.get('/approve_pembayaran', (req,res)=>{
     res.render('approve_pembayaran', {
         title: 'Approve Pembayaran',
@@ -69,6 +80,20 @@ app.get('/approve_pembayaran', (req,res)=>{
 app.get('/sub_approve', (req,res)=>{
     res.render('sub_approve', {
         title: 'Approve Pembayaran',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/buat_akun', (req,res)=>{
+    res.render('buat_akun', {
+        title: 'Buat akun',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/input_perintah', (req,res)=>{
+    res.render('input_perintah', {
+        title: 'Perintah',
         layout: 'layouts/profile'
     })
 })

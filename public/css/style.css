@@ -320,10 +320,10 @@ footer {
 .edit-form-datadiri {
   margin-top: 40px;
   width: 100%;
-  height: auto;
+  height: 460px;
 }
 
-input[type="text"] {
+input {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
   padding: 12px;
@@ -518,7 +518,8 @@ input[type="submit"]:hover {
   border-radius: 8px;
   border: 1px solid rgb(214, 214, 214);
 }
-.header-transaksi h4, .header-pembayaran h4 {
+.header-transaksi h4,
+.header-pembayaran h4 {
   font-weight: 600;
   font-size: 25px;
   margin-top: 10px;
@@ -543,7 +544,7 @@ input[type="submit"]:hover {
   border: 2px solid #04aa6d;
 }
 
-.btn-bayar{
+.btn-bayar {
   padding: 0px;
   margin-top: 10px;
   margin-right: 40px;
@@ -561,12 +562,12 @@ input[type="submit"]:hover {
   margin-top: 40px;
 }
 
-.btn-bayar:hover{
+.btn-bayar:hover {
   background-color: #00c07a;
 }
 
 /* Approve Pembayaran */
-.container-judul{
+.container-judul {
   margin: auto;
   padding: 5px;
   width: 70%;
@@ -577,21 +578,21 @@ input[type="submit"]:hover {
   text-align: center;
   padding-bottom: 20px;
 }
-.header-judul{
+.header-judul {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
   font-family: cursive;
   color: #04aa6d;
 }
-.container-approve{
+.container-approve {
   text-decoration: none;
   text-decoration-style: none;
   color: inherit;
 }
-.container-approve2{  
+.container-approve2 {
   height: 200px;
-  width: 300px  ;
+  width: 300px;
   display: inline-block;
   border: 1px solid rgb(214, 214, 214);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -600,16 +601,16 @@ input[type="submit"]:hover {
   padding: 10px;
   margin: 20px 10px 10px 0px;
 }
-.container-approve2 h4{
+.container-approve2 h4 {
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 15px;
   font-size: 20px;
 }
-.icon-approve{
+.icon-approve {
   font-size: 100px;
   margin: 20px;
-  color: #04AA6D  ;
+  color: #04aa6d;
 }
 
 /* Sub Approve Pembayaran */
@@ -621,7 +622,7 @@ input[type="submit"]:hover {
   height: auto;
   margin-right: 10px;
 }
-.header-approve h4{
+.header-approve h4 {
   font-family: cursive;
   font-size: x-large;
   color: #04aa6d;
@@ -629,7 +630,7 @@ input[type="submit"]:hover {
   margin: 20px;
   display: inline-block;
 }
-.header-approve h2{
+.header-approve h2 {
   font-family: cursive;
   font-size: medium;
   color: black;
@@ -638,7 +639,7 @@ input[type="submit"]:hover {
   margin-bottom: 15px;
   display: inline-block;
 }
-.approve-pembayaran{
+.approve-pembayaran {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin: 20px;
@@ -646,11 +647,11 @@ input[type="submit"]:hover {
   height: auto;
   text-align: left;
 }
-.approve-pembayaran h4{
+.approve-pembayaran h4 {
   font-size: large;
   margin: 17px 0px 10px 20px;
 }
-.dari_transaksi{
+.dari_transaksi {
   padding: 0px;
   margin-top: 10px;
   margin-right: 20px;
@@ -666,3 +667,66 @@ input[type="submit"]:hover {
   float: right;
 }
 
+/* buat akun */
+.container-2 {
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.container-buat-akun {
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  width: 75%;
+  height: 540px;
+  border: 1px solid rgb(214, 214, 214);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.container-buat-akun h4 {
+  text-align: center;
+  font-family: cursive;
+  font-weight: 500;
+  font-size: 25px;
+  color: #00c07a;
+  margin-bottom: 20px;
+}
+
+.container-buat-akun .row {
+  margin-left: 0;
+}
+
+/* Input Perintah */
+.container-perintah {
+  padding: 20px;
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  border: 1px solid rgb(214, 214, 214);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.container-perintah select {
+  font-size: 15px;
+  display: inline-block;
+  width: 102.7%;
+  height: 45px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #04aa6d;
+  margin-bottom: 10px;
+}
+
+.container-perintah textarea{
+  font-size: 15px;
+  width: 100%;
+  display: inline-block;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #04aa6d;
+}
