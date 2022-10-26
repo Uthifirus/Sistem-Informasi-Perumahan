@@ -20,7 +20,7 @@ body{
     position: relative;
     max-width: 430px;
     width: 100%;
-    background: #caf0c7;
+    background: #04aa6d;
     border-radius: 15px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -74,7 +74,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background-color: #b8e6b3;
+    background-color: #04aa6d;
     border-radius: 25px;
 }
 
@@ -165,13 +165,13 @@ body{
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #9edba2;
+    background-color: #04aa6d;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .button input:hover{
-    background-color: #b8e6b3;
+    background-color: #08bd7a;
 }
 
 /* .form .login-signup{
