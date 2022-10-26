@@ -52,9 +52,23 @@ app.get('/sub_pembayaran', (req,res)=>{
     })
 })
 
-app.get('/kelola_keuangan', (req,res)=>{
-    res.render('kelola_keuangan', {
-        title: 'Kelola Keuangan',
+app.get('/transaksi', (req,res)=>{
+    res.render('transaksi', {
+        title:'pembayaran',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/approve_pembayaran', (req,res)=>{
+    res.render('approve_pembayaran', {
+        title: 'Approve Pembayaran',
+        layout: 'layouts/profile'
+    })
+})
+
+app.get('/sub_approve', (req,res)=>{
+    res.render('sub_approve', {
+        title: 'Approve Pembayaran',
         layout: 'layouts/profile'
     })
 })
