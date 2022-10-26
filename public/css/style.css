@@ -667,6 +667,7 @@ input[type="submit"]:hover {
   float: right;
 }
 
+<<<<<<< HEAD
 /* buat akun */
 .container-2 {
   padding-top: 20px;
@@ -729,4 +730,50 @@ input[type="submit"]:hover {
   border-radius: 10px;
   padding: 10px;
   border: 2px solid #04aa6d;
+=======
+/* Kelola Keuangan */
+.container1{
+  display: table;
+  width: 1200px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 20px;
+  line-height: 50px;
+}
+.container h4{
+  font-family: cursive;
+  font-size: x-large;
+  color: #04aa6d;
+  font-weight: 600;
+  margin: 20px;
+  display: inline-block;
+}
+.table-row:hover{
+  background-color:#caf0c7;
+}
+.heading{
+  font-weight: bold;
+  display: table-row;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 35px;
+  color: #ffffff;
+}
+.table-row{  
+  display: table-row;
+  text-align: center;
+}
+.strip{  
+  display: table-row;
+  text-align: center;
+  background-color:#f0f0f0;
+}
+.board{ 
+  display: table-cell;
+  border: 1px solid #CCC;
+}
+.grid{
+  display: table-cell;
+  border: 1px solid #CCC;
+>>>>>>> a683365f81800c259696e76455b4ba27da62c2a6
 }

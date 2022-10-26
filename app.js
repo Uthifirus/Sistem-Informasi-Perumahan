@@ -83,6 +83,7 @@ app.get('/sub_approve', (req,res)=>{
         layout: 'layouts/profile'
     })
 })
+<<<<<<< HEAD
 
 app.get('/buat_akun', (req,res)=>{
     res.render('buat_akun', {
@@ -94,6 +95,18 @@ app.get('/buat_akun', (req,res)=>{
 app.get('/input_perintah', (req,res)=>{
     res.render('input_perintah', {
         title: 'Perintah',
+=======
+app.get('/login', (req,res)=>{
+    res.render('login', {
+        title: 'login',
+        layout: 'layouts/layout_login'
+    })
+})
+
+app.get('/kelola_keuangan', (req,res)=>{
+    res.render('kelola_keuangan', {
+        title: 'Kelola Keuangan',
+>>>>>>> a683365f81800c259696e76455b4ba27da62c2a6
         layout: 'layouts/profile'
     })
 })
