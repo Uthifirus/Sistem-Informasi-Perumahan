@@ -72,6 +72,12 @@ app.get('/sub_approve', (req,res)=>{
         layout: 'layouts/profile'
     })
 })
+app.get('/login', (req,res)=>{
+    res.render('login', {
+        title: 'login',
+        layout: 'layouts/layout_login'
+    })
+})
 
 app.get('/kelola_keuangan', (req,res)=>{
     res.render('kelola_keuangan', {
