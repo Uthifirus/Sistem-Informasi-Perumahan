@@ -1,28 +1,13 @@
 <div class="container">
-    <div class="container-berita">
-        <div class="img-berita">
-            <img src="https://akcdn.detik.net.id/visual/2015/07/27/5e908382-d4ad-471c-9ee7-35f70815632d_169.jpg?w=650"
-                alt="">
+    <% berita.forEach(item => { %>
+     
+        <div class="container-berita">
+            <div class="img-berita">
+                <img src="<%= item.imgBerita %>" alt="">
+            </div>
+            <div class="content-berita">
+                <%= item.contentBerita %>
+            </div>
         </div>
-        <div class="content-berita">
-    
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor elit, congue et porta ut, ultricies
-            at velit. Aliquam tempus dapibus scelerisque. Sed vitae sem non lorem condimentum tempus. Nunc ac fringilla
-            lorem, sollicitudin commodo lorem. Curabitur placerat, tellus sit amet scelerisque scelerisque, ligula eros
-            vulputate augue, auctor mattis ligula justo eu risus. Vestibulum eleifend nunc non vehicula dictum. Morbi
-            aliquet quis diam eu interdum. Nunc in risus a sem finibus sodales molestie in justo.
-    
-            Donec in ante eget nisl commodo cursus eget nec augue. Duis dictum molestie quam, id lobortis diam. Maecenas ut
-            tristique ipsum. Nulla euismod in nisl eget porttitor. Ut porttitor pharetra sodales. Vestibulum dignissim
-            efficitur tempor. Nulla egestas, diam eu pretium ullamcorper, ipsum lectus volutpat nunc, tincidunt tincidunt
-            velit enim feugiat eros.
-    
-            Sed quis fringilla ligula. Vivamus dignissim tempus vehicula. In dapibus facilisis tincidunt. Nullam pulvinar,
-            nunc bibendum condimentum interdum, metus arcu condimentum eros, vitae pellentesque dui enim sit amet augue.
-            Nullam ultricies commodo tellus, at auctor nisl aliquam id. Curabitur lectus turpis, lobortis eu facilisis sit
-            amet, venenatis ut ante. Vivamus dignissim tempor sem laoreet pretium. In sed lacus vehicula, laoreet urna eget,
-            mollis felis. Phasellus ornare ullamcorper arcu. Cras dignissim rhoncus diam, ac hendrerit nibh mollis non.
-            Aliquam suscipit elementum lorem id malesuada.
-        </div>
-    </div>
+    <% }) %>
 </div>

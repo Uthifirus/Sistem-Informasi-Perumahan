@@ -1,17 +1,14 @@
 <div class="container">
-    <% for( let index = 0; index < 4; index++ ) { %>
-        <a href="/detail_berita" style="text-decoration: none; color: inherit;">
+    <% berita.forEach(item=> { %>
+        <a href="/detail_berita/<%= item.idberita %>" style="text-decoration: none; color: inherit;">
             <div class="card-body">
                 <div class="card-img">
-                    <img src="https://cdn-icons-png.flaticon.com/512/168/168882.png" alt="">
+                    <img src="<%= item.imgBerita %> " alt="">
                 </div>
                 <div class="card-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue nisl, euismod vitae eleifend ac,
-                    lobortis sit amet ante. Nunc fringilla ex nec elementum pellentesque. Nunc pellentesque mauris id nisi
-                    pretium, malesuada rhoncus ante varius. In pulvinar felis purus, vitae dictum ante mattis eget. Etiam
-                    commodo in tellus at tincidunt.
+                    <%= item.titleBerita %> 
                 </div>
             </div>
         </a>
-    <% } %>
+        <% }) %>
 </div>

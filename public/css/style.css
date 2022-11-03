@@ -199,15 +199,16 @@ footer {
 }
 
 .card-img img {
-  width: 100%;
-  height: auto;
-  margin: 5px;
+  width: 300px;
+  height: 230px;
+  margin: 10px;
 }
 
 .card-content {
   margin: 20px 25px 0px 25px;
   width: auto;
   height: auto;
+  text-align: left;
 }
 
 /* Detail Berita */

@@ -4,13 +4,13 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form action="#">
+                <form action="/login" method="POST">
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your username" required>
+                        <input name="username" type="text" placeholder="Enter your username" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <input name="password" type="password" class="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input onclick="location.href='/'" type="button" value="Login">
+                        <button type="submit">LOGIN</button>
                     </div>
                 </form>
 
