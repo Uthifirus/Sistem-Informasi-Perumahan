@@ -6,31 +6,16 @@ const bodyParser = require("body-parser");
 const { json } = require("body-parser");
 const session = require("express-session");
 const path = require("path");
-const flash = require("req-flash");
 
 app.listen(3000, () => {
   console.log("server run on port 3000");
 });
-
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(
-  session({
-    resave: false,
-    saveUninitialized: false,
-    secret: "alskdjlkwjd93kljd9dja39odai93",
-    name: "secretName",
-    cookie: {
-      sameSite: true,
-      maxAge: 60000,
-    },
-  })
-);
-app.use(flash());
 
 pool.connect((err) => {
   if (!err) {
@@ -40,28 +25,53 @@ pool.connect((err) => {
   }
 });
 
-//  Routing
+// Routing Login
+app.post("/loginAuth", (req, res) => {
+  let email = req.body.email;
+  let password = req.body.pass;
+  if (email && password) {
+    pool.connect((err, connection) => {
+      if (err) throw err;
+      connection.query(
+        `SELECT * FROM table_user WHERE user_email = $1 AND user_password = $2`,
+        [email, password],
+        (error, results) => {
+          
+          let role = results.rows[0].role; 
 
-app.get("/", (req, res) => {
-  pool.query("select * from berita", (err, result) => {
-    if (!err) {
-      res.render("index", {
-        berita: result.rows,
-        title: "Perum Sugan Rame",
-        layout: "layouts/main-layout",
-      });
-    } else {
-      res.render(err.message);
-    }
+          if (error) throw error;
+          if (results.rows != 0) {
+            if (role == 'admin') {
+              res.redirect("/home_admin");
+            } else if (role == 'warga'){
+              res.redirect("/home_warga");
+            } else{
+              res.redirect("/login");
+            }
+          } else {
+            res.redirect("/login");
+          }
+        }
+      );
+      connection.release();
+    });
+  }
+});
+
+app.get("/login", (req, res) => {
+  res.render("login", {
+    title: "login",
+    layout: "layouts/layout_login",
   });
 });
 
+//  Routing general
 app.get("/detail_berita/:id", (req, res) => {
   let id = req.params.id;
 
   pool.query(
     `SELECT * FROM berita WHERE idberita = $1`,
-    [id],
+    [id, title],
     (err, results) => {
       if (err) {
         throw err;
@@ -76,30 +86,11 @@ app.get("/detail_berita/:id", (req, res) => {
   );
 });
 
-// app.get("/detail_berita", (req, res) => {
-//   res.render("detail_berita", {
-//     title: "Detail Berita",
-//     layout: "layouts/profile",
-//   });
-// });
-
-// app.post("/", (req,res)=>{
-//     const {title, desc, content} = req.body
-
-//     pool.query((`insert into berita(title,desc,content) values('${title}', '${desc}', '${content}')`), (err,result)=>{
-//         if (!err) {
-//             res.send("success")
-//         } else{
-//             res.send(err.message)
-//         }
-//     })
-// })
-
 // Warga
-app.get("/Home_Warga", (req, res) => {
+app.get("/home_warga", (req, res) => {
   pool.query("select * from berita", (err, result) => {
     if (!err) {
-      res.render("index", {
+      res.render("index-warga", {
         berita: result.rows,
         title: "Perum Sugan Rame",
         layout: "layouts/main-layout-warga",
@@ -146,6 +137,19 @@ app.get("/transaksi", (req, res) => {
 });
 
 // Ketua RT
+app.get("/home_admin", (req, res) => {
+  pool.query("select * from berita", (err, result) => {
+    if (!err) {
+      res.render("index-admin", {
+        berita: result.rows,
+        title: "Perum Sugan Rame",
+        layout: "layouts/main-layout",
+      });
+    } else {
+      res.render(err.message);
+    }
+  });
+});
 
 app.get("/approve_pembayaran", (req, res) => {
   res.render("approve_pembayaran", {
@@ -172,13 +176,6 @@ app.get("/input_perintah", (req, res) => {
   res.render("input_perintah", {
     title: "Perintah",
     layout: "layouts/profile",
-  });
-});
-
-app.get("/login", (req, res) => {
-  res.render("login", {
-    title: "login",
-    layout: "layouts/layout_login",
   });
 });
 
